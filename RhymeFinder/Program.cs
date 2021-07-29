@@ -18,7 +18,7 @@ namespace RhymeFinder
                 : "Setting up rhyme dictionary, and ignoring ARPAbet lexical stress. This will give more rhyme results, but the results may not be as exact. To enable lexical stress awareness, pass 'uselexicalstress' as a command-line argument.");
             var stopwatch = Stopwatch.StartNew();
             var lines = File.ReadAllLines(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "cmudict-0.7b"));
-            var commonWords = File.ReadLines("wiki-100k.txt")
+            var commonWords = File.ReadLines("commonwords.txt")
                 .Where(l => !l.StartsWith('#'))
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
             var words = CmuDictionaryParser.Parse(lines);

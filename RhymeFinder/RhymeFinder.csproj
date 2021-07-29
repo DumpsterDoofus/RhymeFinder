@@ -11,7 +11,7 @@
         <None Update="cmudict-0.7b">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
-        <None Update="wiki-100k.txt">
+        <None Update="commonwords.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
